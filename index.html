@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+ @license
+ Copyright 2019 Google LLC. All Rights Reserved.
+ SPDX-License-Identifier: Apache-2.0
+-->
+<html>
+  <head>
+    <title>MosQuest</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+    <script type="module" src="./index.ts"></script>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <!-- TODO: Step 4A2: Add a generic sidebar -->
+    <div id="panel"></div>
+
+    <!-- Map appears here -->
+    <div id="map"></div>
+
+    <!-- TODO: Step 1B, Add a map -->
+    <!-- 
+     The `defer` attribute causes the callback to execute after the full HTML
+     document has been parsed. For non-blocking uses, avoiding race conditions,
+     and consistent behavior across browsers, consider loading using Promises
+     with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+    -->
+    <script
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=key&callback=initMap&v=weekly&libraries=places"
+    ></script>
+  </body>
+</html>
